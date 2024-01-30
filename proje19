@@ -1,0 +1,43 @@
+public class Proje19 {
+
+    private static String isim;
+    private static String renk;
+    private static String sahiplik;
+
+
+    private Pazaryeri() {}
+
+
+    public static void setPazaryeri(String isim, String renk, String sahiplik) {
+        Pazaryeri.isim = isim;
+        Pazaryeri.renk = renk;
+        Pazaryeri.sahiplik = sahiplik;
+    }
+
+
+    public static void setIsimRenk(String isim, String renk) {
+        Pazaryeri.isim = isim;
+        Pazaryeri.renk = renk;
+    }
+
+
+    public static String getIsim() {
+        return isim;
+    }
+
+
+    public static String getRenk() {
+        return renk;
+    }
+
+
+    public static String getSahiplik() {
+        return sahiplik;
+    }
+
+
+    public static String PazaryeriTuru() {
+        return "belirsiz";
+    }
+}
+//Proje19
