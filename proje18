@@ -1,0 +1,36 @@
+public class Proje18 {
+    private int Atmno;
+
+    public ATM(int Atmno) {
+        this.Atmno = Atmno;
+    }
+
+    public void parayatir(double miktar) {
+        System.out.println(miktar + " TL yatırıldı.");
+    }
+
+    public void paracek(double miktar) {
+        System.out.println(miktar + " TL çekildi.");
+    }
+
+    public boolean kayitkontrol(int HesapNo, String sifre) {
+        if (HesapNo == 1234 && sifre.equals("1234")) {
+            System.out.println("Kayıt doğrulandı.");
+            return true;
+        } 
+	else {
+            System.out.println("Kayıt doğrulanamadı.");
+            return false;
+        }
+    }
+
+    public static void main(String[] args) {
+        ATM atm = new ATM(1);
+
+        atm.parayatir(1000);
+        atm.paracek(500);
+
+        atm.kayitkontrol(1234, "1234");
+    }
+}
+//proje18
