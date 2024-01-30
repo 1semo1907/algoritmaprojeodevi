@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Proje9 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ondalık bir sayı girin: ");
+        int ondalikSayi = scanner.nextInt();
+
+        String binarySayi = decimalToBinary(ondalikSayi);
+
+        System.out.println("Binary karşılığı: " + binarySayi);
+
+        scanner.close();
+    }
+
+    public static String decimalToBinary(int ondalikSayi) {
+        
+        return Integer.toBinaryString(ondalikSayi);
+
+    }
+}
+//Proje9
