@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Proje2 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Bir kelime girin: ");
+        String kelime = scanner.nextLine();
+
+        if (isPalindrome(kelime)) {
+            System.out.println(kelime + " bir palindromdur.");
+        } else {
+            System.out.println(kelime + " bir palindrom değildir.");
+        }
+
+        scanner.close();
+    }
+
+    public static boolean isPalindrome(String kelime) {
+        
+        String tersKelime = "";
+        for (int i = kelime.length() - 1; i >= 0; i--) {
+            tersKelime += kelime.charAt(i);
+        }
+
+        
+        return kelime.equalsIgnoreCase(tersKelime);
+    }
+}
+//proje 2
