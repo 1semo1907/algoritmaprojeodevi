@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Proje16 {
+    public static void main(String[] args) {
+        String metin = "Merhaba nasılsınız? Örnek bir metin.";
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Aramak istediğiniz karakteri girin: ");
+        char aranankarakter = scanner.next().charAt(0);
+
+        int karaktersayisi = sayac(metin, aranankarakter);
+
+        System.out.println("Metin içinde '" + aranankarakter + "' karakteri " + karaktersayisi + " kez bulunmaktadır.");
+
+        scanner.close();
+    }
+
+    public static int sayac(String metin, char karakter) {
+        int sayac = 0;
+
+        for (int i = 0; i < metin.length(); i++) {
+            if (metin.charAt(i) == karakter) {
+                sayac++;
+            }
+        }
+
+        return sayac;
+    }
+}
+//Proje16
